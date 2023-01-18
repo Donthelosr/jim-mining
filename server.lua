@@ -77,7 +77,7 @@ RegisterNetEvent("jim-mining:Selling", function(data)
         local amount = Player.Functions.GetItemByName(data.item).amount
         local pay = (amount * Config.SellItems[data.item])
         Player.Functions.RemoveItem(data.item, amount)
-        Player.Functions.AddMoney('cash', pay)
+        Player.Functions.AddMoney('cash', pay, 'sold mining materials')
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[data.item], 'remove', amount)
     else
         TriggerClientEvent("QBCore:Notify", src, Loc[Config.Lan].error["dont_have"].." "..QBCore.Shared.Items[data.item].label, "error")

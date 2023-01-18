@@ -1,3 +1,5 @@
+
+
 name "Jim-Mining"
 author "Jimathy"
 version "v2.3.1"
@@ -11,3 +13,4 @@ client_scripts { 'client.lua' }
 server_script { 'server.lua' }
 
 lua54 'yes'
+ 
